@@ -31,7 +31,7 @@ class grid:
         for i in range(0, self.gridSizeX):
             for j in range(0, self.gridSizeY):
                 if self.gridArr[i][j].walkable == 1:
-                    pygame.draw.circle(self.sc, self.WHITE,
+                    pygame.draw.circle(self.sc, self.ORANGE,
                                        (self.gridArr[i][j].worldPosition[0],
                                         self.gridArr[i][j].worldPosition[1]),
                                        self.nodeRadius)

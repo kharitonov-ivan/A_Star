@@ -17,7 +17,7 @@ pygame.init()
 clock = pygame.time.Clock()
 
 sc = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
-Grid = grid.grid(25, WIN_WIDTH, WIN_HEIGHT, sc)
+Grid = grid.grid(10, WIN_WIDTH, WIN_HEIGHT, sc)
 path = pathFinder.pathFinder(Grid)
 flag = 1
 startNode = 0

@@ -17,7 +17,7 @@ class pathFinder:
         while len(openSet) > 0:
             currentNode = openSet[0]
             for i in range(1, len(openSet)):
-                if (openSet[i].getFCost() < currentNode.getFCost()) | (openSet[i].getFCost() == currentNode.getFCost()):
+                if openSet[i].getFCost() <= currentNode.getFCost() | (openSet[i].getFCost() == currentNode.getFCost()):
                     if openSet[i].hCost < currentNode.hCost:
                         currentNode = openSet[i]
             openSet.remove(currentNode)
@@ -39,6 +39,8 @@ class pathFinder:
 
                     if neighbour not in openSet:
                         openSet.append(neighbour)
+        print("ERROR NO PATH")
+        return
 
     def retracePath(self, startNode, endNode):
         path = []
